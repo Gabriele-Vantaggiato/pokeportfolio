@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-pokedex: #f43f5e;
+}
+
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: linear-gradient(to bottom right, #ffffff, #ffbad7); /* Esempio con colori rosa */
+  font-size: 1em;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: cyan;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1px;
+  }
+}
+

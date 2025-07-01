@@ -1,0 +1,20 @@
+<div class="h-[100dvh] flex items-center justify-center p-4">
+  <div
+    class="w-[100dvw] sm:w-[70dvw] md:w-[60dvw] lg:w-[40dvw] h-[80dvh] md:h-[70dvh] rounded-2xl p-5 shadow-2xl border-4 border-black text-white bg-pokedex">
+    <header class="flex items-center gap-4 mb-4">
+      <div class="w-13 h-13 rounded-full bg-white flex items-center justify-center shadow-inner">
+        <div class="w-12 h-12 rounded-full bg-cyan-400 border-4 border-white"></div>
+      </div>
+      <h1 class="text-lg md:text-xl font-bold tracking-wider">PokeDev Portfolio</h1>
+    </header>
+    <app-navbar></app-navbar>
+    <div
+      class="rounded-lg bg-gray-200 p-2 border-4 border-gray-800 text-gray-900 text-xs leading-relaxed shadow-inner h-48 lg:h-[20dvh] xl:h-[40dvh] overflow-y-scroll custom-scrollbar">
+      <router-outlet></router-outlet>
+    </div>
+
+    <footer class="mt-4 text-center text-xs text-red-100/80">
+      <p>© 2025 Gabriele Vantaggiato • Gotta code 'em all!</p>
+    </footer>
+  </div>
+</div>
