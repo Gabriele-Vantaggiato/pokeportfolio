@@ -1,5 +1,5 @@
 // pokeright.ts
-import {Component, computed, EventEmitter, Input, Output, signal} from '@angular/core';
+import {Component, EventEmitter, Input, Output, signal, OnChanges, SimpleChanges, input} from '@angular/core';
 import {ISkill} from '../../../../models/ISkill';
 import {NgClass} from '@angular/common';
 
@@ -10,14 +10,21 @@ import {NgClass} from '@angular/common';
   templateUrl: './pokeright.html',
   styleUrl: './pokeright.css',
 })
-export class Pokeright {
-
-  skillSignal = signal<ISkill | null>(null);
-  @Input() set skill(value: ISkill | null) {
-    this.skillSignal.set(value);
-  }
-
-  isHidden = computed(() => !this.skillSignal());
-
+export class Pokeright implements OnChanges {
+  skillSignal = input<ISkill | null>(null);
   @Output() onClose = new EventEmitter<void>();
+
+  public animationState = signal<'open' | 'closed'>('closed');
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['skillSignal']) {
+      if (changes['skillSignal'].currentValue) {
+        // Aggiorniamo il signal
+        this.animationState.set('open');
+      } else {
+        // Aggiorniamo il signal
+        this.animationState.set('closed');
+      }
+    }
+  }
 }
