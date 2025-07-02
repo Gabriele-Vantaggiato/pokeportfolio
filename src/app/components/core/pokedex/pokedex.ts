@@ -11,8 +11,7 @@ import {PokedexStateService} from '../../../services/pokedex-state-service';
   imports: [
     Pokeleft,
     Pokeright,
-    AsyncPipe
-  ],
+    AsyncPipe],
   templateUrl: './pokedex.html',
   styleUrl: './pokedex.css'
 })

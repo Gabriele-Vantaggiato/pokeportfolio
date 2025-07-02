@@ -1,33 +1,29 @@
 <div
-  class="w-[80dvw] sm:w-[65dvw] md:w-[55dvw] lg:w-[35dvw] h-[70dvh] md:h-[60dvh] rounded-2xl bg-stone-50/95 p-5 font-pixel text-gray-800 shadow-lg border-2 border-gray-200
-         transition-all duration-500 ease-in-out [transform-style:preserve-3d] [transform-origin:left]"
-  [class.hidden]="isRemovedFromLayout()"
+  class="h-[70dvh] rounded-2xl bg-stone-50/95 p-5 font-pixel text-gray-800 shadow-lg border-2 border-gray-200
+         transition-all duration-500 ease-in-out overflow-hidden"
   [ngClass]="{
-    'opacity-100 [transform:perspective(800px)_rotateY(90deg)]': animationState() === 'open',
-    'opacity-0 pointer-events-none [transform:perspective(800px)_rotateY(90deg)]': animationState() === 'closed'
-  }"
-
-  (transitionend)="onTransitionEnd()">
-
-  @if (skill) {
+    'w-0 opacity-0 !p-0 !border-0': isHidden(),
+    'w-[80dvw] sm:w-[65dvw] md:w-[55dvw] lg:w-[35dvw] opacity-100': !isHidden()
+  }">
+  @if (skillSignal()) {
     <header class="flex justify-between items-center mb-4">
       <h3 class="text-lg text-pink-500 font-bold my-3">Skill Entry</h3>
       <button (click)="onClose.emit()" class="text-pink-500 text-2xl leading-none hover:text-red-600 focus:outline-none">&times;</button>
     </header>
 
     <div class="flex items-center gap-4 my-8">
-      <img [src]="skill.imgSrc" class="h-13 w-13 object-contain p-1" [alt]="skill.title"/>
+      <img [src]="skillSignal()!.imgSrc" class="h-13 w-13 object-contain p-1" [alt]="skillSignal()!.title"/>
       <div>
-        <h4 class="text-2xl font-bold text-gray-900">{{ skill.title }}</h4>
-        <p class="text-sm text-gray-500">{{ skill.title }}</p>
+        <h4 class="text-2xl font-bold text-gray-900">{{ skillSignal()!.title }}</h4>
+        <p class="text-sm text-gray-500">{{ skillSignal()!.title }}</p>
       </div>
     </div>
 
     <div class="mb-5">
-      <p class="text-sm mb-1">Proficiency: <span class="text-lg font-bold mt-1 text-gray-700">{{ skill.proficiency }}%</span></p>
+      <p class="text-sm mb-1">Proficiency: <span class="text-lg font-bold mt-1 text-gray-700">{{ skillSignal()!.proficiency }}%</span></p>
       <div class="w-full bg-gray-200 rounded-full h-4 border-2 border-white shadow-inner">
         <div class="h-full rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 transition-all duration-500 ease-out"
-             [style.width.%]="skill.proficiency">
+             [style.width.%]="skillSignal()!.proficiency">
         </div>
       </div>
     </div>
