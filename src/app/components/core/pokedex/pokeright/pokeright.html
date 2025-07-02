@@ -1,1 +1,30 @@
-<p>pokeright works!</p>
+<div class="w-[80dvw] sm:w-[65dvw] md:w-[55dvw] lg:w-[35dvw] h-[70dvh] md:h-[60dvh] rounded-2xl
+bg-stone-50/95 p-5 font-pixel text-gray-800 shadow-lg border-2 border-gray-200" [@openCloseBook]>
+  <header class="flex justify-between items-center mb-4">
+    <h3 class="text-lg text-pink-500 font-bold my-3">Skill Entry</h3>
+    <button (click)="onClose.emit()" class="text-pink-500 text-2xl leading-none hover:text-red-600 focus:outline-none">&times;</button>
+  </header>
+
+  <div class="flex items-center gap-4 my-8">
+    <img [src]="skill?.imgSrc" class="h-13 w-13 object-contain p-1" [alt]="skill?.title"/>
+    <div>
+      <h4 class="text-2xl font-bold text-gray-900">{{ skill?.title }}</h4>
+      <p class="text-sm text-gray-500">{{ skill?.title }}</p>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <p class="text-sm mb-1">Proficiency: <span class="text-lg font-bold mt-1 text-gray-700">{{ skill?.proficiency }}%</span>
+    </p>
+    <div class="w-full bg-gray-200 rounded-full h-4 border-2 border-white shadow-inner">
+      <div class="h-full rounded-full bg-gradient-to-r from-yellow-400 to-orange-500"
+           [style.width.%]="skill?.proficiency">
+      </div>
+    </div>
+  </div>
+
+  <div>
+<!--    <span class="text-sm">Acquired:</span>-->
+<!--    <span class="ml-2 text-lg font-bold text-blue-600">{{ skill.acquired }}</span>-->
+  </div>
+</div>

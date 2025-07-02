@@ -4,7 +4,7 @@ import {Pokedex} from './components/core/pokedex/pokedex';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Pokedex],
+  imports: [Pokedex],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

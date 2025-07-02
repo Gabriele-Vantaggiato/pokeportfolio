@@ -1,0 +1,21 @@
+<div class="mb-10">
+  @if (sectionTitle) {
+    <span class="text-lg mb-5"> {{ sectionTitle | uppercase }} </span>
+  }
+  @defer (on viewport) {
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 mt-5">
+      @for (s of skills(); track s.id) {
+        <div class="flex flex-col items-center my-3" (click)="onSkillClick.emit(s)">
+          <img [src]="s.imgSrc" class="h-13 w-13 object-contain p-1" [alt]="s.title"/>
+        </div>
+      }
+    </div>
+  } @placeholder {
+    <div class="flex flex-row animate-pulse justify-center gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-7 mt-10">
+      @for (s of [0, 1, 2, 3]; track s) {
+        <span class="size-12 block bg-gray-200 rounded-full dark:bg-neutral-700"></span>
+      }
+    </div>
+  }
+</div>
+

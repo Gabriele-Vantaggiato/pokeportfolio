@@ -1,0 +1,95 @@
+{
+  "SKILLS": {
+    "TITLE": "Skills",
+    "USING_NOW": "Top skill",
+    "USED": "Used",
+    "LEARNING": "Learning",
+    "OTHER": "Other"
+  },
+  "SERVICES": {
+    "DEVELOPMENT": {
+      "TITLE": "Development",
+      "DESCRIPTION": "I can translate and implement website requirements based on your needs and suggestions, creating graphical interfaces from mockups."
+    },
+    "MAINTENANCE": {
+      "TITLE": "Maintenance",
+      "DESCRIPTION": "I can maintain the project by improving its reliability thanks to many years of experience in bug resolution, but most importantly through the implementation of unit and e2e tests."
+    },
+    "EFFICIENCY": {
+      "TITLE": "Efficiency",
+      "DESCRIPTION": "One of my key words is efficiency. The best thing for a website is to be efficient and scalable across all platforms. By implementing new Angular features and properly modularizing the project, I can achieve high performance standards."
+    }
+  },
+  "CERTIFICATIONS": {
+    "TITLE": "Certifications",
+    "NO_CERTIFICATION_MESSAGE": "Currently in progress! Check back soon for updates."
+  },
+  "ABOUT_ME": {
+    "TITLE": "About Me",
+    "EXPLORE": "EXPLORE"
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "HI": "Hi, I'm",
+    "SOMETHING_ABOUT_ME": "Something about me"
+  },
+  "PERSONAL_DESCRIPTION": {
+    "SECTION1": "I have about six years of experience in web development. My professional career started in 2019 as a Junior Developer, <br/>\n    and after several years of dedication, I had the opportunity to be promoted to a Senior role. <br/>",
+    "SECTION2": "Most of my experience focuses on Angular, TypeScript, and RxJS. <br/>\n      I've recently delved into Angular versions 16 to 19, and I'm eager to put this new knowledge into practice. <br/>\n      Additionally, I've used React, Redux, and NgRx in various applications. <br/>",
+    "SECTION3": "My greatest satisfaction lies in creating fluid and efficient interfaces. I ensure my code is clean and reusable, <br/>\n      with a particular emphasis on performance and User Experience (UX). <br/>\n      My goal is for the products we create to be flawless and offer an enjoyable user experience.<br/>",
+    "SECTION4": "In my previous experiences, I've worked with Scrum and Agile methodologies. <br/>\n      I enjoy being part of an organization where team members discuss and share ideas, which is why, in my opinion, <br/>\n      code reviews are one of the best ways to improve both team skills and product quality, <br/>\n      helping others write higher-quality code and always learning something new myself. <br/>\n      I would be happy to join a team where I can grow professionally and contribute to your exciting project. <br/>"
+  },
+  "EXPERIENCE": {
+    "TITLE": "Work Experience",
+    "JUNIOR": {
+      "DESCRIPTION": {
+        "TIMELINE_1": "Implemented automated tests (unit tests and end-to-end tests) to ensure software reliability and quality using Cypress and Jasmine",
+        "TIMELINE_2": "Maintained backend using Express",
+        "TIMELINE_3": "Collaborated with designers and product managers to translate business requirements into effective technical functionalities",
+        "TIMELINE_4": "Designed and developed reusable and highly modular Angular 12 components, reducing development time and improving code maintainability",
+        "TIMELINE_5": "Collaborated with external backend teams to integrate APIs and RESTful services, ensuring data consistency and performance optimization",
+        "TIMELINE_6": "Collaborated with an international team in Scrum methodology for various overseas projects"
+      }
+    },
+    "SENIOR": {
+      "DESCRIPTION": {
+        "TIMELINE_1": "Developed and maintained an internal project with web application components and modules using Angular 15 and TypeScript",
+        "TIMELINE_2": "Implemented state management solutions with NgRx to ensure efficient and reactive application state handling",
+        "TIMELINE_3": "Developed responsive and accessible user interfaces, following UX/UI design best practices",
+        "TIMELINE_4": "Created dynamic web applications using React 17 and Redux, improving interactivity and user experience",
+        "TIMELINE_5": "Collaborated with a backend team, maintaining the latter using SpringBoot",
+        "TIMELINE_6": "Developed and integrated i18n for multilingual applications to improve their accessibility"
+      }
+    },
+    "CTO": {
+      "DESCRIPTION": {
+        "TIMELINE_1": "Oversaw the software development of a new startup to launch it into the market",
+        "TIMELINE_2": "Refactored WordPress site and managed SEO to generate more conversions and ensure efficiency and scalability",
+        "TIMELINE_3": "Integrated payment systems with Stripe, Klarna, and PayPal",
+        "TIMELINE_4": "Implemented Anti-DDoS plugin to ensure greater security",
+        "TIMELINE_5": "Optimized images and implemented caching system for faster rendering"
+      }
+    }
+  },
+  "CONTACT_ME": {
+    "TITLE": "Contact Me",
+    "PLACEHOLDERS": {
+      "EMAIL": "Enter your email*",
+      "SUBJECT": "Enter the subject*",
+      "MESSAGE": "Enter your message*"
+    },
+    "ERROR_MESSAGES": {
+      "EMAIL": {
+        "REQUIRED": "Email is a required field",
+        "INVALID": "Invalid email format"
+      },
+      "SUBJECT": {
+        "REQUIRED": "Subject is a required field"
+      },
+      "MESSAGE": {
+        "REQUIRED": "Message is a required field"
+      }
+    },
+    "SUBMIT_BTN": "SEND"
+  }
+}

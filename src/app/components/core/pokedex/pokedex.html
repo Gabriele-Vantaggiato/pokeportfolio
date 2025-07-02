@@ -1,5 +1,9 @@
-<div class="min-h-screen">
-  <app-pokeleft></app-pokeleft>
-  <app-pokeright></app-pokeright>
+<div class="min-h-screen flex-row">
+  <div class="h-[100dvh] flex items-center justify-center p-4">
+    <app-pokeleft></app-pokeleft>
+    @if (selectedSkill$ | async; as skill) {
+      <app-pokeright (onClose)="clearSkill()" [skill]="skill"></app-pokeright>
+    }
+  </div>
 </div>
 

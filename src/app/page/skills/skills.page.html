@@ -1,1 +1,4 @@
-<p>skills.page works!</p>
+<app-skill-section [sectionTitle]="'MY TOP'" [skills]="using()" (onSkillClick)="setSelectedSkill($event)"></app-skill-section>
+<app-skill-section [sectionTitle]="'USED'" [skills]="used()" (onSkillClick)="setSelectedSkill($event)"></app-skill-section>
+<app-skill-section [sectionTitle]="'LEARNING'" [skills]="learning()" (onSkillClick)="setSelectedSkill($event)"></app-skill-section>
+<app-skill-section [sectionTitle]="'OTHER'" [skills]="other()" (onSkillClick)="setSelectedSkill($event)"></app-skill-section>

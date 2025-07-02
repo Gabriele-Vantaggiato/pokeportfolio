@@ -1,0 +1,95 @@
+{
+  "SKILLS": {
+    "TITLE": "Competenze",
+    "USING_NOW": "Top skill",
+    "USED": "Ho Esperienza",
+    "LEARNING": "In apprendimento",
+    "OTHER": "Altro"
+  },
+  "SERVICES": {
+    "DEVELOPMENT": {
+      "TITLE": "Sviluppo",
+      "DESCRIPTION": "Posso tradurre e implementare dei requisiti di un sito web secondo le proprie esigenze e suggerimenti, implementando interfacce grafiche da mockup"
+    },
+    "MAINTENANCE": {
+      "TITLE": "Manutenzione",
+      "DESCRIPTION": "Posso manutenere il progetto migliorandone l'affidabilità grazie all'esperienza pluriennale in risoluzione bug, ma soprattutto grazie all'implementazione di test unitari e e2e"
+    },
+    "EFFICIENCY": {
+      "TITLE": "Efficienza",
+      "DESCRIPTION": "Una delle mie parole chiave è efficienza. La cosa migliore per un sito web è essere efficiente e scalabile su ogni piattaforma. Grazie all'implementazione di nuove funzionalità di Angular e modularizzando correttamente il progetto posso raggiungere standard di performance elevati"
+    }
+  },
+  "CERTIFICATIONS": {
+    "TITLE": "Certificazioni",
+    "NO_CERTIFICATION_MESSAGE": "Attualmente in lavorazione! Torna presto per aggiornamenti."
+  },
+  "ABOUT_ME": {
+    "TITLE": "Chi sono",
+    "EXPLORE": "ESPLORA"
+  },
+  "HOME": {
+    "TITLE": "Home",
+    "HI": "Ciao, io sono",
+    "SOMETHING_ABOUT_ME": "Qualcosa su di me"
+  },
+  "PERSONAL_DESCRIPTION": {
+    "SECTION1": "Ho maturato circa sei anni di esperienza nel campo dello sviluppo web. La mia carriera professionale è iniziata nel\n    2019 come Junior Developer, <br/>\n    e dopo diversi anni di impegno, ho avuto l'opportunità di essere promosso a un ruolo Senior. <br/>",
+    "SECTION2": "La maggior parte della mia esperienza si concentra su Angular, TypeScript e RxJS. <br/>\n      Recentemente, ho approfondito le versioni da 16 a 19 di Angular, e non vedo l'ora di mettere in pratica queste\n      nuove conoscenze. <br/>\n      Oltre a ciò, ho utilizzato React, Redux e NgRx in diverse applicazioni. <br/>",
+    "SECTION3": "La mia più grande soddisfazione risiede nella creazione di interfacce fluide ed efficienti. Mi assicuro che il mio\n      codice sia pulito e riutilizzabile, <br/>\n      ponendo particolare enfasi su performance e User Experience (UX). <br/>\n      Il mio obiettivo è che i prodotti che realizziamo siano impeccabili e offrano un'esperienza utente piacevole.\n<br/>",
+    "SECTION4": "Nelle mie precedenti esperienze, ho lavorato con metodologie Scrum e Agile. <br/>\n      Mi piace far parte di un'organizzazione in cui i membri del team discutono e condividono idee motivo per cui, a\n      mio avviso, <br/>\n      le code review sono uno dei modi migliori per migliorare sia le competenze del team che la qualità del prodotto\n      stesso, <br/>\n      aiutando gli altri a scrivere codice di qualità superiore e imparando sempre qualcosa di nuovo. <br/>\n      Sarei lieto di unirmi a un team dove poter crescere professionalmente e contribuire al vostro entusiasmante\n progetto. <br/>"
+  },
+  "EXPERIENCE": {
+    "TITLE": "Esperienze lavorative",
+    "JUNIOR": {
+      "DESCRIPTION": {
+        "TIMELINE_1": "Implementato test automatizzati (unit test e end-to-end test) per garantire l' affidabilità e la qualità del software utilizzando Cypress e Jasmine",
+        "TIMELINE_2": "Manotenuto Back end utilizzando Express",
+        "TIMELINE_3": "Collaborato con designer e product manager per tradurre i requisiti di business in funzionalità tecniche efficaci",
+        "TIMELINE_4": "Progettato e sviluppato componenti in Angular 12 riutilizzabili e altamente modulari, riducendo il tempo di sviluppo e migliorando la manutenzione del codice",
+        "TIMELINE_5": "Collaborato con team esterno di backend per integrare API e servizi RESTful, assicurando la coerenza dei dati e l'ottimizzazione delle performance",
+        "TIMELINE_6": "Collaborato con un team internazionale in modalità scrum per vari progetti esteri"
+      }
+    },
+    "SENIOR": {
+      "DESCRIPTION": {
+        "TIMELINE_1": "Sviluppato e mantenuto un progetto interno con componenti e moduli di applicazioni web utilizzando Angular 15 e TypeScript",
+        "TIMELINE_2": "Implementato soluzioni di state management con NgRx per garantire una gestione efficiente e reattiva dello stato dell'applicazione",
+        "TIMELINE_3": "Sviluppato interfacce utente responsive e accessibili, seguendo le best practices di UX/UI design",
+        "TIMELINE_4": "Realizzato applicazioni web dinamiche utilizzando React 17 e Redux, migliorando l'interattività e l'esperienza utente",
+        "TIMELINE_5": "Collaborato con un team di backend manotenendo quest'ultimo utilizzando SpringBoot",
+        "TIMELINE_6": "Sviluppata e integrata i18n per applicativo multilingua al fine di migliorare l'accessibilità di quest'ultimo"
+      }
+    },
+    "CTO": {
+      "DESCRIPTION": {
+        "TIMELINE_1": "Curata la parte software di una nuova startup per lanciarsi sul mercato",
+        "TIMELINE_2": "Refactor sito wordpress e curata la SEO in modo da generare più conversioni e assicurare efficienza e scalabilità",
+        "TIMELINE_3": "Integrato sistema di pagamento con stripe, klarna e paypal",
+        "TIMELINE_4": "Implementato plugin Anti DDoS per garantire maggiore sicurezza",
+        "TIMELINE_5": "Ottimizzazione immagini e implementato sistema di caching per rendering più veloci"
+      }
+    }
+  },
+  "CONTACT_ME": {
+    "TITLE": "Contattami",
+    "PLACEHOLDERS": {
+      "EMAIL": "Inserisci la tua email*",
+      "SUBJECT": "Inserisci l' oggetto*",
+      "MESSAGE": "Inserisci il tuo messaggio*"
+    },
+    "ERROR_MESSAGES": {
+      "EMAIL": {
+        "REQUIRED": "Email è un campo obbligatorio",
+        "INVALID": "L' email non è valida"
+      },
+      "SUBJECT": {
+        "REQUIRED": "L' oggetto è un campo obbligatorio"
+      },
+      "MESSAGE": {
+        "REQUIRED": "Il messaggio è un campo obbligatorio"
+      }
+    },
+    "SUBMIT_BTN": "INVIA"
+  }
+}
