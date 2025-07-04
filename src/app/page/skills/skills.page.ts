@@ -2,7 +2,7 @@ import {Component, computed, inject, signal} from '@angular/core';
 import {ISkill} from '../../models/ISkill';
 import {INIT_SKILL} from '../../constants';
 import {SkillSectionComponent} from './skill-section/skill-section';
-import {PokedexStateService} from '../../services/pokedex-state-service';
+import {PokedexStateService} from '../../services/pokedex-state.service';
 
 
 @Component({

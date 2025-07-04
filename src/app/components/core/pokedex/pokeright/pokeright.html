@@ -14,7 +14,9 @@
     </header>
 
     <div class="flex items-center gap-4 my-8">
-      <img [src]="skillSignal()!.imgSrc" class="h-13 w-13 object-contain p-1 endless-rotation" [alt]="skillSignal()!.title"/>
+      <div class="bg-zinc-100 rounded-lg border-1 border-gray-300">
+        <img [src]="skillSignal()!.imgSrc" class="h-13 w-13 object-contain p-1 endless-rotation" [alt]="skillSignal()!.title"/>
+      </div>
       <div>
         <h4 class="text-2xl font-bold text-gray-900">{{ skillSignal()!.title }}</h4>
         <p class="text-sm text-gray-500">{{ skillSignal()!.title }}</p>

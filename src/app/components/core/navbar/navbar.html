@@ -2,7 +2,7 @@
   @for (r of routes; track $index; let last = $last) {
     @if(!last) {
       <button class="flex items-center gap-2 rounded-md px-3 py-1 text-sm bg-white text-black shadow-md border-2"
-              [routerLinkActive]="'pokebutton-active'" routerLink="{{r.path}}">
+              [routerLinkActive]="'pokebutton-active'" routerLink="{{r.path}}" appPlaySoundOnClick="click">
         <span class="w-2 h-2 rounded-full bg-black" [routerLinkActive]="'poketext-active'"></span>
         {{r.path | uppercase}}
       </button>

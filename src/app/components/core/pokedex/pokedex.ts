@@ -4,7 +4,7 @@ import {Pokeright} from './pokeright/pokeright';
 import {AsyncPipe, NgClass} from '@angular/common';
 import {Observable, of} from 'rxjs';
 import {ISkill} from '../../../models/ISkill';
-import {PokedexStateService} from '../../../services/pokedex-state-service';
+import {PokedexStateService} from '../../../services/pokedex-state.service';
 
 @Component({
   selector: 'app-pokedex',
