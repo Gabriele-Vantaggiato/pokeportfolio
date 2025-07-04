@@ -1,11 +1,14 @@
 import {ChangeDetectionStrategy, Component, EventEmitter, input, Input, Output} from '@angular/core';
 import {ISkill} from '../../../models/ISkill';
 import {UpperCasePipe} from '@angular/common';
+import {CdkTooltipDirective} from '../../../directives/tooltip.directive';
 
 @Component({
   selector: 'app-skill-section',
   imports: [
-    UpperCasePipe],
+    UpperCasePipe,
+    CdkTooltipDirective,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './skill-section.html',
   styleUrl: './skill-section.css'

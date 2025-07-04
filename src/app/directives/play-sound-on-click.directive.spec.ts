@@ -1,4 +1,4 @@
-import { PlaySoundOnClick } from './play-sound-on-click';
+import { PlaySoundOnClick } from './play-sound-on-click.directive';
 
 describe('PlaySoundOnClick', () => {
   it('should create an instance', () => {

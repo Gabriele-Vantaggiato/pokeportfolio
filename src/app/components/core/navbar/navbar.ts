@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {routes} from '../../../app.routes';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 import {UpperCasePipe} from '@angular/common';
-import {PlaySoundOnClickDirective} from '../../../directives/play-sound-on-click';
+import {PlaySoundOnClickDirective} from '../../../directives/play-sound-on-click.directive';
 
 @Component({
   selector: 'app-navbar',

@@ -1,0 +1,6 @@
+@reference "tailwindcss";
+
+.poke-tooltip {
+  background: var(--bg-pokedex);
+  @apply text-white text-sm rounded-md p-2 px-3 shadow-lg border-1 border-white;
+}
