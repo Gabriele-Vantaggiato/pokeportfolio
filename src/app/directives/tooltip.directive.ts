@@ -19,7 +19,7 @@ export class CdkTooltipDirective {
 
   @HostListener('mouseenter')
   show() {
-    // 1. Definisce la strategia di posizionamento: collegato al nostro elemento
+    // 1. Definisco la strategia di posizionamento: collegato all'elemento
     const positionStrategy = this.overlayPositionBuilder
       .flexibleConnectedTo(this.elementRef)
       .withPositions([
@@ -28,19 +28,19 @@ export class CdkTooltipDirective {
           originY: 'top',
           overlayX: 'center',
           overlayY: 'bottom',
-          offsetY: -8, // Un piccolo margine
+          offsetY: -8,
         },
       ]);
 
     this.overlayRef = this.overlay.create({ positionStrategy });
 
-    // 3. Crea un "portale" per il nostro TooltipComponent
+    // 3. Creo un "portale" per il TooltipComponent
     const tooltipPortal = new ComponentPortal(TooltipComponent);
 
-    // 4. "Attacca" il nostro componente al layer fluttuante
+    // 4. "Attacco" il componente al layer fluttuante
     const componentRef = this.overlayRef.attach(tooltipPortal);
 
-    // 5. Passa il testo al componente appena creato
+    // 5. Passo il testo al componente appena creato
     componentRef.instance.text = this.text;
   }
 
