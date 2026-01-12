@@ -5,6 +5,7 @@ import {AsyncPipe, NgClass} from '@angular/common';
 import {Observable, of} from 'rxjs';
 import {ISkill} from '../../../models/ISkill';
 import {PokedexStateService} from '../../../services/pokedex-state.service';
+import {ICertifications} from '../../../models/ICertifications';
 
 @Component({
   selector: 'app-pokedex',
@@ -18,13 +19,10 @@ import {PokedexStateService} from '../../../services/pokedex-state.service';
 export class Pokedex {
 
   public selectedSkill$: Observable<null | ISkill> = of(null);
+  public selectedCertification$: Observable<null | ICertifications> = of(null);
   private pokedexStateSrv = inject(PokedexStateService);
 
   constructor() {
     this.selectedSkill$ = this.pokedexStateSrv.selectedSkill$;
-  }
-
-  clearSkill() {
-    this.pokedexStateSrv.clearSelection();
   }
 }

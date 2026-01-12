@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, refCount, shareReplay} from 'rxjs';
+import {BehaviorSubject, shareReplay} from 'rxjs';
 import {ISkill} from '../models/ISkill';
 
 @Injectable({
