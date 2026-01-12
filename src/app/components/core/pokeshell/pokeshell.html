@@ -1,4 +1,4 @@
-<div class="scene relative w-full h-full flex justify-center">
+<div class="scene scene-dynamic-bg w-full h-[90dvh] flex justify-center" #pokeShell>
   <!-- POKEDEX -->
   <div
     #pokedexEl
@@ -7,6 +7,6 @@
   </div>
   <!-- BRIEF CASE -->
   <div #briefCaseEl class="object-3d absolute opacity-0">
-    <app-certifications-briefcase (close)="goToPokedex()"> </app-certifications-briefcase>
+    <app-certifications-briefcase (closeCertification)="goToPokedex()"> </app-certifications-briefcase>
   </div>
 </div>

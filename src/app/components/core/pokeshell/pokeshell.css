@@ -5,3 +5,23 @@
 .object-3d {
   transform-style: preserve-3d;
 }
+
+/* Definiamo i tipi per le variabili così il browser sa come animarle */
+@property --grad-color-1 {
+  syntax: '<color>';
+  initial-value: #ffffff;
+  inherits: false;
+}
+
+@property --grad-color-2 {
+  syntax: '<color>';
+  initial-value: #ffbad7;
+  inherits: false;
+}
+
+.scene-dynamic-bg {
+  /* Usiamo le variabili nel gradiente */
+  background: linear-gradient(to bottom right, var(--grad-color-1), var(--grad-color-2));
+  width: 100%;
+  height: 100dvh;
+}

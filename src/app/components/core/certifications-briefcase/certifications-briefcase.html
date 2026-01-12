@@ -1,6 +1,59 @@
-<div class="badge-case relative object-3d">
-  <div class="case-lid absolute w-full h-1/2 top-0 bg-red-700 rounded-t-xl"></div>
-  <div class="case-base w-full h-full bg-red-800 rounded-xl pt-20">
-    <!-- badges -->
-  </div>
+<div class="flex flex-col items-center justify-center min-h-screen perspective-1000">
+
+    <div #caseContainer class="relative w-[640px] h-[380px] transition-all duration-500 cursor-pointer group/case"
+         (click)="toggleCase()">
+
+        <div class="absolute inset-0 bg-[#2a2a2a] border-[6px] border-[#4a4a4a] rounded-lg shadow-[0_10px_20px_rgba(0,0,0,0.5)] p-6 overflow-hidden velvet-texture">
+
+            <div class="absolute inset-2 border-4 border-[#6a6a6a] rounded-md pointer-events-none"></div>
+
+            <div class="flex justify-between items-center text-yellow-500 font-pixel mb-6 text-sm tracking-widest z-10 relative">
+                <span class="drop-shadow-[2px_2px_0_#000]">CERTIFICAZIONI FRONT END</span>
+                <span class="drop-shadow-[2px_2px_0_#000]">{{ earnedCount }}</span>
+            </div>
+
+            <div class="grid grid-cols-4 gap-6 relative z-10">
+                <div *ngFor="let badge of badges"
+                     class="relative aspect-square rounded-full bg-[#1a1a1a] border-4 border-[#3a3a3a] flex items-center justify-center group/badge badge-slot-shadow transition-all duration-300 hover:border-yellow-500 hover:bg-[#252525]">
+
+                    <img *ngIf="badge.earned" [src]="badge.icon"
+                         class="w-20 h-20 object-contain drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
+
+                    <div *ngIf="!badge.earned"
+                         class="w-16 h-16 rounded-full bg-[#0f0f0f] border-2 border-[#2a2a2a] opacity-50"></div>
+
+                    <div class="absolute -bottom-12 hidden group-hover/badge:block bg-[#f0f0f0] text-black text-xs px-3 py-1 border-2 border-black font-pixel whitespace-nowrap z-50 shadow-[4px_4px_0_#000]">
+                        {{ badge.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div #lid
+             class="absolute inset-0 bg-[#8b4513] border-[6px] border-[#5a3519] rounded-lg shadow-inner z-20 flex items-center justify-center leather-texture"
+             style="backface-visibility: hidden;">
+
+            <div class="absolute top-0 left-0 w-12 h-12 border-t-[6px] border-l-[6px] border-[#a0a0a0] rounded-tl-lg"></div>
+            <div class="absolute top-0 right-0 w-12 h-12 border-t-[6px] border-r-[6px] border-[#a0a0a0] rounded-tr-lg"></div>
+            <div class="absolute bottom-0 left-0 w-12 h-12 border-b-[6px] border-l-[6px] border-[#a0a0a0] rounded-bl-lg"></div>
+            <div class="absolute bottom-0 right-0 w-12 h-12 border-b-[6px] border-r-[6px] border-[#a0a0a0] rounded-br-lg"></div>
+
+            <div class="absolute top-[-20px] left-1/2 -translate-x-1/2 w-32 h-6 bg-[#5a3519] border-2 border-[#3a2510] rounded-t-md shadow-[0_-4px_0_#3a2510]"></div>
+
+            <div class="flex flex-col items-center">
+            <span class="text-[#c08040] text-5xl font-pixel select-none uppercase tracking-tighter drop-shadow-[4px_4px_0_#3a2510] border-b-4 border-[#c08040] pb-2 mb-2">
+            PokeDev
+            </span>
+                <span class="text-[#a06030] text-2xl font-pixel select-none uppercase tracking-widest drop-shadow-[2px_2px_0_#3a2510]">
+            Certificazioni
+            </span>
+            </div>
+
+            <div class="absolute bottom-8 left-24 w-14 h-8 bg-[#a0a0a0] border-4 border-[#6a6a6a] rounded-sm shadow-[0_4px_0_#4a4a4a]"></div>
+            <div class="absolute bottom-8 right-24 w-14 h-8 bg-[#a0a0a0] border-4 border-[#6a6a6a] rounded-sm shadow-[0_4px_0_#4a4a4a]"></div>
+        </div>
+    </div>
+    <div class="mt-30 w-full text-center text-yellow-300 font-pixel text-[10px] animate-pulse z-10">
+        {{ isOpen ? 'TAP TO CLOSE CASE' : 'TAP CASE TO OPEN' }}
+    </div>
 </div>

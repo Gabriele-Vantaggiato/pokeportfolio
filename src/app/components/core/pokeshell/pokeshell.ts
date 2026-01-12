@@ -3,13 +3,12 @@ import gsap from "gsap";
 import {Pokedex} from '../pokedex/pokedex';
 import {CertificationsBriefcase} from '../certifications-briefcase/certifications-briefcase';
 
-
 type ViewMode = 'certifications' | 'pokedex';
 @Component({
   selector: 'app-pokeshell',
   imports: [
     Pokedex,
-    CertificationsBriefcase
+    CertificationsBriefcase,
   ],
   templateUrl: './pokeshell.html',
   styleUrl: './pokeshell.css'
@@ -19,6 +18,7 @@ export class Pokeshell implements AfterViewInit {
 
   @ViewChild('pokedexEl') pokedexEl!: ElementRef<HTMLDivElement>;
   @ViewChild('briefCaseEl') briefCaseEl!: ElementRef<HTMLDivElement>;
+  @ViewChild('pokeShell') pokeShell!: ElementRef<HTMLDivElement>;
   private viewReady = signal(false);
 
   constructor() {
@@ -56,6 +56,13 @@ export class Pokeshell implements AfterViewInit {
       z: -150,
       opacity: 0,
       duration: 1
+    });
+
+    tl.to(this.pokeShell.nativeElement, {
+      '--grad-color-1': '#2464be',
+      '--grad-color-2': '#003e8c',
+      duration: 0.3,
+      ease: 'power2.inOut'
     });
 
     tl.fromTo(
@@ -98,6 +105,13 @@ export class Pokeshell implements AfterViewInit {
       z: -150,
       opacity: 0,
       duration: 1
+    });
+
+    tl.to(this.pokeShell.nativeElement, {
+      '--grad-color-1': '#ffffff',
+      '--grad-color-2': '#ffbad7',
+      duration: 0.3,
+      ease: 'power2.inOut'
     });
 
     tl.fromTo(
