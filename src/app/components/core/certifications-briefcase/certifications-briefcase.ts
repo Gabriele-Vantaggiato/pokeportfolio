@@ -1,11 +1,14 @@
-import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Output, signal, ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
+import {ICertifications} from "../../../models/ICertifications";
+import {INIT_CERTIFICATIONS} from "../../../constants";
+import {CdkTooltipDirective} from "../../../directives/tooltip.directive";
 
 @Component({
   selector: 'app-certifications-briefcase',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CdkTooltipDirective],
   templateUrl: './certifications-briefcase.html',
   styleUrls: ['./certifications-briefcase.css']
 })
@@ -14,22 +17,8 @@ export class CertificationsBriefcase {
   @ViewChild('lid') lid!: ElementRef;
   @Output() closeCertification = new EventEmitter<void>();
 
+  public certifications = signal<ICertifications[]>(INIT_CERTIFICATIONS);
   isOpen = false;
-
-  badges = [
-    { id: 1, name: 'HTML5 Master', icon: 'assets/badges/boulder-badge.png', earned: true },
-    { id: 2, name: 'CSS3 Stylist', icon: 'assets/badges/cascade-badge.png', earned: true },
-    { id: 3, name: 'JS Ninja', icon: 'assets/badges/thunder-badge.png', earned: true },
-    { id: 4, name: 'Angular Architect', icon: '', earned: false },
-    { id: 5, name: 'React Specialist', icon: '', earned: false },
-    { id: 6, name: 'Node.js Backend', icon: '', earned: false },
-    { id: 7, name: 'DB Expert', icon: '', earned: false },
-    { id: 8, name: 'Cloud Certified', icon: '', earned: false },
-  ];
-
-  get earnedCount() {
-    return this.badges.filter(b => b.earned).length;
-  }
 
   toggleCase() {
     this.isOpen = !this.isOpen;

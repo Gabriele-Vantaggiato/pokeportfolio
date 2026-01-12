@@ -9,23 +9,17 @@
 
             <div class="flex justify-between items-center text-yellow-500 font-pixel mb-6 text-sm tracking-widest z-10 relative">
                 <span class="drop-shadow-[2px_2px_0_#000]">CERTIFICAZIONI FRONT END</span>
-                <span class="drop-shadow-[2px_2px_0_#000]">{{ earnedCount }}</span>
+                <span class="drop-shadow-[2px_2px_0_#000]">{{ certifications().length }}</span>
             </div>
 
             <div class="grid grid-cols-4 gap-6 relative z-10">
-                <div *ngFor="let badge of badges"
-                     class="relative aspect-square rounded-full bg-[#1a1a1a] border-4 border-[#3a3a3a] flex items-center justify-center group/badge badge-slot-shadow transition-all duration-300 hover:border-yellow-500 hover:bg-[#252525]">
-
-                    <img *ngIf="badge.earned" [src]="badge.icon"
-                         class="w-20 h-20 object-contain drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
-
-                    <div *ngIf="!badge.earned"
-                         class="w-16 h-16 rounded-full bg-[#0f0f0f] border-2 border-[#2a2a2a] opacity-50"></div>
-
-                    <div class="absolute -bottom-12 hidden group-hover/badge:block bg-[#f0f0f0] text-black text-xs px-3 py-1 border-2 border-black font-pixel whitespace-nowrap z-50 shadow-[4px_4px_0_#000]">
-                        {{ badge.name }}
+                @for (c of certifications(); track c.id) {
+                    <div class="relative aspect-square rounded-full bg-[#1a1a1a] border-4 border-[#3a3a3a] flex
+                    items-center justify-center group/badge badge-slot-shadow transition-all duration-300 hover:border-yellow-500 hover:bg-[#252525]">
+                        <img [src]="c.imgSrc" [appCdkTooltip]="c.name"
+                             class="w-20 h-20 object-contain drop-shadow-[0_4px_6px_rgba(0,0,0,0.8)]">
                     </div>
-                </div>
+                }
             </div>
         </div>
 
