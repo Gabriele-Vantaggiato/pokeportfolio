@@ -1,7 +1,7 @@
 <div class="min-h-screen flex-row">
   <div class="h-[100dvh] flex items-center justify-center p-4">
     <app-pokeleft (openCertifications)="openCertifications.emit()"></app-pokeleft>
-    <app-pokeright [skillSignal]="selectedSkill$ | async"></app-pokeright>
+    <app-pokeright [skillSignal]="selectedSkill$ | async" (onClose)="clearSelection()"></app-pokeright>
   </div>
 </div>
 

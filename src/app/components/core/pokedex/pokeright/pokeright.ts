@@ -27,7 +27,6 @@ export class Pokeright implements OnChanges {
   public animationState = signal<'open' | 'closed'>('closed');
   audioService = inject(AudioService);
 
-
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['skillSignal']) {
       if (!changes['skillSignal'].firstChange) {

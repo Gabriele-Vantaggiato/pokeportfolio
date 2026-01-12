@@ -27,4 +27,8 @@ export class Pokedex {
   constructor() {
     this.selectedSkill$ = this.pokedexStateSrv.selectedSkill$;
   }
+
+  clearSelection() {
+    this.pokedexStateSrv.clearSelection();
+  }
 }
