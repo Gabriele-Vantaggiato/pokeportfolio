@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {routes} from '../../../app.routes';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 import {UpperCasePipe} from '@angular/common';
@@ -18,4 +18,5 @@ import {PlaySoundOnClickDirective} from '../../../directives/play-sound-on-click
 export class Navbar {
 
   protected routes = routes;
+  @Output() openCertifications = new EventEmitter<void>();
 }

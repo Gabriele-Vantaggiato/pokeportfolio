@@ -6,7 +6,7 @@
     </div>
     <h1 class="text-lg md:text-xl font-bold tracking-wider">PokeDev Portfolio</h1>
   </header>
-  <app-navbar></app-navbar>
+  <app-navbar (openCertifications)="openCertifications.emit()"></app-navbar>
   <div
     class="rounded-lg bg-stone-50/95 p-2 border-4 border-gray-800 text-gray-900 text-xs leading-relaxed shadow-inner h-48 lg:h-[20dvh] xl:h-[40dvh] overflow-y-scroll custom-scrollbar">
     <router-outlet></router-outlet>

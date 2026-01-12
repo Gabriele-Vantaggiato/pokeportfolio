@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {Navbar} from '../../navbar/navbar';
 import {RouterOutlet} from '@angular/router';
 
@@ -12,5 +12,6 @@ import {RouterOutlet} from '@angular/router';
   styleUrl: './pokeleft.css'
 })
 export class Pokeleft {
+  @Output() openCertifications = new EventEmitter<void>();
 
 }

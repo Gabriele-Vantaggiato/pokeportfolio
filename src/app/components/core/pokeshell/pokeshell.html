@@ -1,0 +1,12 @@
+<div class="scene relative w-full h-full flex justify-center">
+  <!-- POKEDEX -->
+  <div
+    #pokedexEl
+    class="object-3d absolute">
+    <app-pokedex (openCertifications)="goToCertifications()"> </app-pokedex>
+  </div>
+  <!-- BRIEF CASE -->
+  <div #briefCaseEl class="object-3d absolute opacity-0">
+    <app-certifications-briefcase (close)="goToPokedex()"> </app-certifications-briefcase>
+  </div>
+</div>

@@ -11,7 +11,6 @@ import {ISkill} from '../../../../models/ISkill';
 import {NgClass} from '@angular/common';
 import {AudioService} from '../../../../services/audio.service';
 import {SkillDetail} from '../../../../page/skills/skill-detail/skill-detail';
-import {ICertifications} from '../../../../models/ICertifications';
 
 @Component({
   selector: 'app-pokeright',
@@ -23,7 +22,6 @@ import {ICertifications} from '../../../../models/ICertifications';
 })
 export class Pokeright implements OnChanges {
   skillSignal = input<ISkill | null>(null);
-  certificationSignal = input<ICertifications | null>(null);
   @Output() onClose = new EventEmitter<void>();
 
   public animationState = signal<'open' | 'closed'>('closed');

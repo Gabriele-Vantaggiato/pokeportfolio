@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, EventEmitter, inject, Output, signal} from '@angular/core';
 import {Pokeleft} from './pokeleft/pokeleft';
 import {Pokeright} from './pokeright/pokeright';
 import {AsyncPipe, NgClass} from '@angular/common';
@@ -16,11 +16,13 @@ import {ICertifications} from '../../../models/ICertifications';
   templateUrl: './pokedex.html',
   styleUrl: './pokedex.css'
 })
+
 export class Pokedex {
 
   public selectedSkill$: Observable<null | ISkill> = of(null);
   public selectedCertification$: Observable<null | ICertifications> = of(null);
   private pokedexStateSrv = inject(PokedexStateService);
+  @Output() openCertifications = new EventEmitter<void>();
 
   constructor() {
     this.selectedSkill$ = this.pokedexStateSrv.selectedSkill$;

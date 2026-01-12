@@ -1,0 +1,7 @@
+.scene {
+  perspective: 1200px;
+}
+
+.object-3d {
+  transform-style: preserve-3d;
+}
