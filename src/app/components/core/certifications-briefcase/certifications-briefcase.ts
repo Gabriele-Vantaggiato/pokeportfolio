@@ -62,4 +62,8 @@ export class CertificationsBriefcase {
       ease: "power1.in"
     }, "-=0.3");
   }
+
+  openCertification(c: ICertifications) {
+    console.log(c);
+  }
 }
