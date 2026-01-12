@@ -6,7 +6,6 @@ import {
   Output,
 } from '@angular/core';
 import {ISkill} from '../../../models/ISkill';
-import {PokedexStateService} from '../../../services/pokedex-state.service';
 
 @Component({
   selector: 'app-skill-detail',
@@ -14,12 +13,7 @@ import {PokedexStateService} from '../../../services/pokedex-state.service';
   templateUrl: './skill-detail.html',
   styleUrl: './skill-detail.css'
 })
-export class SkillDetail implements OnDestroy {
+export class SkillDetail {
   skillSignal = input<ISkill>();
-  private pokedexStateSrv = inject(PokedexStateService);
   @Output() onClose = new EventEmitter<void>();
-
-  ngOnDestroy(): void {
-    this.pokedexStateSrv.clearSelection();
-  }
 }
